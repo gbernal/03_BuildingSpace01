@@ -1,6 +1,9 @@
 ########################
-#Unrela Generated Files#
+#
+Unrela Generated Files
+#
 ########################
+
 */Build
 */Binaries
 */DerivedDataCache
@@ -8,9 +11,16 @@
 */Saved
 *.db
 BuildingScape/Content/StarterContent/
+
+
 ######################
+
 # VS Generated Files #
+
 ######################
+
 *.VC.db
 BuildingSpace/BuildingSpace.sln
+
 *.opendb
+*.suo
