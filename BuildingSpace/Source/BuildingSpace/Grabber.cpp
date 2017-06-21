@@ -28,6 +28,14 @@ void UGrabber::BeginPlay()
 
 	/// Look for the attached physics handle 
 	PhysicsHandle = GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
+	if (PhysicsHandle)
+	{
+		//everything is ok
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("%s physics handle component is missing"), *GetOwner()->GetName());
+	}
 }
 
 // Called every frame
