@@ -26,9 +26,9 @@ void UGrabber::BeginPlay()
 
 	UE_LOG(LogTemp, Warning, TEXT(" Grabber reporting for duty! "));
 
-	
+	/// Look for the attached physics handle 
+	PhysicsHandle = GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
 }
-
 
 // Called every frame
 void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
