@@ -30,7 +30,7 @@ void UGrabber::BeginPlay()
 	PhysicsHandle = GetOwner()->FindComponentByClass<UPhysicsHandleComponent>();
 	if (PhysicsHandle)
 	{
-		//everything is ok
+		//everything is ok.
 	}
 	else
 	{
