@@ -5,8 +5,9 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "PhysicsEngine/PhysicsHandleComponent.h"
-
+#include "Components/InputComponent.h"
 #include "Grabber.generated.h"
+
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -29,6 +30,17 @@ private:
 	float Reach = 100.f;
 
 	UPhysicsHandleComponent* PhysicsHandle = nullptr;
+	UInputComponent* InputComponent = nullptr;
+
+	//Ray-cast and grabs what is in reach
+	void Grab();
+
+	// called  (assume) when grab key is released
+	void Release();
+	void FindPhysicsHandleComponent();
+	//Setup (assume)attach input component
+	void SetInputComponent();
 		
-	
+	//Return hit for the first physics body in reach
+	const FHitResult GetFirstPhysicsBodyInReach();
 };
