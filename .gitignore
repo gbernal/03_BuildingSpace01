@@ -22,9 +22,8 @@ BuildingScape/Content/StarterContent/
 *.VC.db
 
 BuildingSpace/BuildingSpace.sln
-
+*.sln
 *.opendb
 *.suo
-*.suo
-*.suo
+
 BuildingSpace.rar

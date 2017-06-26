@@ -23,7 +23,8 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-public:	
+public:
+	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 private:
@@ -43,4 +44,8 @@ private:
 		
 	//Return hit for the first physics body in reach
 	const FHitResult GetFirstPhysicsBodyInReach();
+
+	//Return the current reach line 
+	FVector GetReachLineEnd();
+	FVector GetReachLineStart();
 };
