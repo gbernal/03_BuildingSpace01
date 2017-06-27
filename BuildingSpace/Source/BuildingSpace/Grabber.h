@@ -29,7 +29,8 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 private:
 	float Reach = 100.f;
-
+	//return total mass in Kg
+	
 	UPhysicsHandleComponent* PhysicsHandle = nullptr;
 	UInputComponent* InputComponent = nullptr;
 
@@ -48,4 +49,5 @@ private:
 	//Return the current reach line 
 	FVector GetReachLineEnd();
 	FVector GetReachLineStart();
+	
 };

@@ -35,7 +35,6 @@ void UOpenDoor::BeginPlay()
 	//FInd the owner actor
 	Owner = GetOwner();
 
-	ActorThatOpens = GetWorld()->GetFirstPlayerController()->GetPawn();
 
 }
 
@@ -47,13 +46,11 @@ void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 
 	// Poll the trigger Volume
 
-	// IF the actor the opens is in the value
- if (PressurePlate->IsOverlappingActor(ActorThatOpens))
- {
-	 OpenDoor();
-	 LastDoorOpenTime = GetWorld()->GetTimeSeconds();
+	if (GetTotalMassOfActorOnPlate() > 50.f) {//TODO function
 
- }
+	
+	}
+
 	//Check if it is time to close the Door
 	if (GetWorld()->GetTimeSeconds() - LastDoorOpenTime >= DoorCloseDelay)
 	{
@@ -61,4 +58,8 @@ void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 		//LastDoorOpenTime = 0.f;
 	}
 }
+float UOpenDoor:: GetTotalMassOfActorOnPlate()
+{
+	return 60.f;
 
+}
