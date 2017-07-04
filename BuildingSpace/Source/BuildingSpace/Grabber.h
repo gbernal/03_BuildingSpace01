@@ -32,6 +32,7 @@ private:
 	//return total mass in Kg
 	
 	UPhysicsHandleComponent* PhysicsHandle = nullptr;
+<<<<<<< Updated upstream
 	UInputComponent* InputComponent = nullptr;
 
 	//Ray-cast and grabs what is in reach
@@ -42,6 +43,9 @@ private:
 	void FindPhysicsHandleComponent();
 	//Setup (assume)attach input component
 	void SetInputComponent();
+=======
+    UInputComponent* InputComponent = nullptr;
+>>>>>>> Stashed changes
 		
 	//Return hit for the first physics body in reach
 	const FHitResult GetFirstPhysicsBodyInReach();

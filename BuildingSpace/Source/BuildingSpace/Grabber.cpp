@@ -47,7 +47,24 @@ void UGrabber::SetInputComponent()
 	{
 		UE_LOG(LogTemp, Error, TEXT("%s Input component is missing"), *GetOwner()->GetName());
 	}
+<<<<<<< Updated upstream
 
+=======
+    
+    /// Look for the attached Input component
+    InputComponent = GetOwner()->FindComponentByClass<UInputComponent>();
+    if (InputComponent)
+    {
+        //everything is ok.
+        UE_LOG(LogTemp, Warning, TEXT("%s input component found"), *GetOwner()->GetName());
+
+    }
+    else
+    {
+        UE_LOG(LogTemp, Error, TEXT("%s input component is missing"), *GetOwner()->GetName());
+    }
+    
+>>>>>>> Stashed changes
 }
 
 // Called every frame
